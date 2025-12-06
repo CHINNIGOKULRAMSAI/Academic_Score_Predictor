@@ -1,6 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Score Predictor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f172a; --text:#e5e7eb; --muted:#9ca3af; --primary:#3b82f6; --accent:#10b981; --border:#1f2937; }
+    *{box-sizing:border-box}
+    body{margin:0; min-height:100vh; display:grid; place-items:center; background:radial-gradient(1000px 600px at 10% 10%, rgba(59,130,246,.08), transparent 60%), radial-gradient(800px 500px at 90% 15%, rgba(16,185,129,.08), transparent 60%), var(--bg); font-family:'Inter',system-ui; color:var(--text)}
+    .wrap{max-width:880px; width:100%; padding:32px}
+    .hero{border:1px solid var(--border); border-radius:16px; padding:36px; background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)); box-shadow:0 12px 40px rgba(2,6,23,.5)}
+    h1{margin:0 0 8px; font-size:32px}
+    p{margin:0 0 18px; color:var(--muted)}
+    .cta{display:flex; gap:12px; align-items:center}
+    a.btn{display:inline-block; text-decoration:none; background:var(--primary); color:white; padding:12px 16px; border-radius:10px; font-weight:600; border:1px solid #1e40af}
+    a.btn:hover{box-shadow:0 10px 20px rgba(30,64,175,.35)}
+    .features{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px}
+    .feature{border:1px solid var(--border); border-radius:12px; padding:14px; background:rgba(255,255,255,.02)}
+    .feature h3{margin:0 0 6px; font-size:16px}
+    .feature p{margin:0; font-size:13px}
+    @media(max-width:860px){.features{grid-template-columns:1fr}}
+  </style>
+  </head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>Academic Score Predictor</h1>
+      <p>Predict math scores from student attributes using a trained ML pipeline with robust preprocessing and tuned models.</p>
+      <div class="cta">
+        <a class="btn" href="{{ url_for('predict_datapoint') }}">Start Prediction</a>
+        <span style="color:var(--muted); font-size:13px">Runs locally • No data is uploaded</span>
+      </div>
+      <div class="features">
+        <div class="feature"><h3>Clean UI</h3><p>Professional, responsive interface.</p></div>
+        <div class="feature"><h3>Preprocessing</h3><p>Imputation, scaling, and encoding.</p></div>
+        <div class="feature"><h3>Models</h3><p>XGBoost and Gradient Boosting tuning.</p></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
